@@ -3,11 +3,13 @@ require('../less/main.less');
 
 'use strict';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import React from 'react';
 import ReactDOM from 'react-dom';
 const RaisedButton = require('material-ui/lib/raised-button');
 import Hello from './components/Hello.jsx';
 
+injectTapEventPlugin();
 // Addons are in separate packages: 
 // const createFragment = require('react-addons-create-fragment');
 // const immutabilityHelpers = require('react-addons-update');
