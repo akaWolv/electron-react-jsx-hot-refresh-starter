@@ -11,7 +11,11 @@ output: {
   },
   devServer: {
     contentBase:  './public',
-    publicPath:  'http://localhost:8080/built/'
+    publicPath:  'http://localhost:8080/built/',
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   },
   module: {
     loaders: [
@@ -21,7 +25,7 @@ output: {
     ]
   },
   plugins: [
-      new  webpack.HotModuleReplacementPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
       new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$"))
   ]
 }
